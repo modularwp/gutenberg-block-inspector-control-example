@@ -38,9 +38,9 @@ function mdlr_block_controls_example_backend_enqueue() {
 
 	wp_enqueue_style(
 		'mdlr-block-controls-example-backend-style', // Handle.
-		plugins_url( 'editor.css', __FILE__ ), // editor.css: This file styles the block within the Gutenberg editor.
+		plugins_url( 'style.css', __FILE__ ), // editor.css: This file styles the block within the Gutenberg editor.
 		array( 'wp-edit-blocks' ), // Dependencies, defined above.
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // filemtime — Gets file modification time.
+		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) // filemtime — Gets file modification time.
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'mdlr_block_controls_example_backend_enqueue' );
