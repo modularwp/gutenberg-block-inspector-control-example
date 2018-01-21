@@ -9,8 +9,8 @@
 	var registerBlockType = wp.blocks.registerBlockType; // The registerBlockType() function to register blocks.
 	var Editable          = wp.blocks.Editable; // For creating editable elements.
 	var InspectorControls = wp.blocks.InspectorControls; // For adding block controls.
-	var BlockDescription  = wp.blocks.BlockDescription; // Editable component of React.
-	var ToggleControl     = wp.blocks.InspectorControls.ToggleControl; // Editable component of React.
+	var BlockDescription  = wp.blocks.BlockDescription; // For adding descriptions to block settings panels.
+	var ToggleControl     = wp.blocks.InspectorControls.ToggleControl; // For adding toggle controls to block settings panels.
 
 	/**
 	 * Register block
