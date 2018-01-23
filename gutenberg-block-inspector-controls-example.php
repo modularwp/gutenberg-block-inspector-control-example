@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Gutenberg Block: Controls Example
+ * Plugin Name: Gutenberg Block: Inspector Controls Example
  * Plugin URI: https://github.com/modularwp/gutenberg-block-inspector-controls-example
- * Description: An example Gutenberg block with custom contols.
+ * Description: An example Gutenberg block with custom inspector contols.
  * Author: ModularWP
  * Author URI: https://modularwp.com/
  * Version: 1.0.0
