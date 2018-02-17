@@ -23,7 +23,7 @@
 	registerBlockType(
 		'mdlr/block-inspector-controls-example', // Block name. Must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 		{
-			title: __( 'Block Inspector Controls Example' ), // Block title. __() function allows for internationalization.
+			title: __( 'Inspector Control Example' ), // Block title. __() function allows for internationalization.
 			icon: 'admin-settings', // Block icon from Dashicons. https://developer.wordpress.org/resource/dashicons/.
 			category: 'common', // Block category. Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 			attributes: {
@@ -60,15 +60,6 @@
 					createElement(
 						InspectorControls,
 						{},
-						createElement(
-							BlockDescription,
-							{},
-							createElement(
-								'p',
-								{},
-								__('This is an example of a Gutenberg block using inspector controls.')
-							)
-						),
 						createElement(
 							ToggleControl,
 							{

@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Gutenberg Block: Inspector Controls Example
- * Plugin URI: https://github.com/modularwp/gutenberg-block-inspector-controls-example
- * Description: An example Gutenberg block with custom inspector contols.
+ * Plugin Name: Gutenberg Block: Inspector Control - Example
+ * Plugin URI: https://github.com/modularwp/gutenberg-block-inspector-control-example
+ * Description: This is an example of a Gutenberg block with an inspector control.
  * Author: ModularWP
  * Author URI: https://modularwp.com/
  * Version: 1.0.0
@@ -28,22 +28,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-function mdlr_block_inspector_controls_example_backend_enqueue() {
+function mdlr_block_inspector_control_example_backend_enqueue() {
 	wp_enqueue_script(
-		'mdlr-block-inspector-controls-example-backend-script', // Unique handle.
+		'mdlr-block-inspector-control-example-backend-script', // Unique handle.
 		plugins_url( 'block.js', __FILE__ ), // Block.js: We register the block here.
 		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
 		filemtime( plugin_dir_path( __FILE__ ) . 'block.js' ) // filemtime — Gets file modification time.
 	);
 
 	wp_enqueue_style(
-		'mdlr-block-inspector-controls-example-backend-style', // Handle.
+		'mdlr-block-inspector-control-example-style', // Handle.
 		plugins_url( 'style.css', __FILE__ ), // editor.css: This file styles the block within the Gutenberg editor.
 		array( 'wp-edit-blocks' ), // Dependencies, defined above.
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) // filemtime — Gets file modification time.
 	);
 }
-add_action( 'enqueue_block_editor_assets', 'mdlr_block_inspector_controls_example_backend_enqueue' );
+add_action( 'enqueue_block_editor_assets', 'mdlr_block_inspector_control_example_backend_enqueue' );
 
 /**
  * Enqueue the block's assets.
@@ -56,12 +56,12 @@ add_action( 'enqueue_block_editor_assets', 'mdlr_block_inspector_controls_exampl
  *
  * @since 1.0.0
  */
-function mdlr_block_inspector_controls_example_enqueue() {
+function mdlr_block_inspector_control_example_enqueue() {
 	wp_enqueue_style(
-		'mdlr-block-inspector-controls-example-style', // Handle.
+		'mdlr-block-inspector-control-example-style', // Handle.
 		plugins_url( 'style.css', __FILE__ ), // style.css: This file styles the block on the frontend.
 		array( 'wp-blocks' ), // Dependencies, defined above.
 		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ) // filemtime — Gets file modification time.
 	);
 }
-add_action( 'enqueue_block_assets', 'mdlr_block_inspector_controls_example_enqueue' );
+add_action( 'enqueue_block_assets', 'mdlr_block_inspector_control_example_enqueue' );
