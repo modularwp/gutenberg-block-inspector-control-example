@@ -9,7 +9,6 @@
 	var registerBlockType = wp.blocks.registerBlockType; // The registerBlockType() function to register blocks.
 	var Editable          = wp.blocks.Editable; // For creating editable elements.
 	var InspectorControls = wp.blocks.InspectorControls; // For adding block controls.
-	var BlockDescription  = wp.blocks.BlockDescription; // For adding descriptions to block settings panels.
 	var ToggleControl     = wp.blocks.InspectorControls.ToggleControl; // For adding toggle controls to block settings panels.
 
 	/**
@@ -24,6 +23,7 @@
 		'mdlr/block-inspector-controls-example', // Block name. Must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 		{
 			title: __( 'Inspector Control Example' ), // Block title. __() function allows for internationalization.
+			description: __( 'Block description can be added here...' ), // Block description.
 			icon: 'admin-settings', // Block icon from Dashicons. https://developer.wordpress.org/resource/dashicons/.
 			category: 'common', // Block category. Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 			attributes: {
