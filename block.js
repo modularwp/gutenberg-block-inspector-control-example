@@ -28,7 +28,9 @@
 			category: 'common', // Block category. Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 			attributes: {
 				content: {
-					type: 'string',
+		            type: 'array',
+		            source: 'children',
+		            selector: 'p',
 					default: 'Block with styles that can be toggled with an inspector control.',
 				},
 				applyStyles: {
