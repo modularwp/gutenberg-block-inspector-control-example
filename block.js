@@ -7,9 +7,9 @@
 	var __                = wp.i18n.__; // The __() function for internationalization.
 	var createElement     = wp.element.createElement; // The wp.element.createElement() function to create elements.
 	var registerBlockType = wp.blocks.registerBlockType; // The registerBlockType() function to register blocks.
-	var Editable          = wp.blocks.Editable; // For creating editable elements.
-	var InspectorControls = wp.blocks.InspectorControls; // For adding block controls.
-	var ToggleControl     = wp.blocks.InspectorControls.ToggleControl; // For adding toggle controls to block settings panels.
+	var RichText          = wp.editor.RichText; // For creating editable elements.
+	var InspectorControls = wp.editor.InspectorControls; // For adding block controls.
+	var ToggleControl     = wp.components.ToggleControl; // For adding toggle controls to block settings panels.
 
 	/**
 	 * Register block
@@ -56,7 +56,7 @@
 					}
 				}
 
-				const controls = focus && [
+				const controls = [
 					createElement(
 						InspectorControls,
 						{},
@@ -73,7 +73,7 @@
 
 				return [controls,
 					createElement(
-						Editable,
+						RichText,
 						{
 							tagName: 'p',
 							className: className + ' ' + applyStyles,
